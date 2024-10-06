@@ -58,7 +58,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"A day in my life\",\r\n    \"contenido\": \"Quos voluptatem ut aperiam rem vel eos quia\",\r\n    \"autor\": \"Reina de Inglaterra\"\r\n}",
+							"raw": "{\r\n    \"titulo\": \"Un dia de mi vida\",\r\n    \"contenido\": \"Muestro como vivir un dia como yo\",\r\n    \"autor\": \"Michael Jordan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -80,6 +80,40 @@
 								"v1",
 								"posts",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts_asignarcategoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": \"5\",\r\n    \"category_id\": \"6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts/categorizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"categorizar"
 							]
 						}
 					},
@@ -109,7 +143,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/posts/2",
+							"raw": "http://127.0.0.1:8000/api/v1/posts/1",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -122,7 +156,7 @@
 								"api",
 								"v1",
 								"posts",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -135,7 +169,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"A day in my life\",\r\n    \"contenido\": \"Quos voluptatem ut aperiam rem vel eos quia\",\r\n    \"autor\": \"Reina de Inglaterra II\"\r\n}",
+							"raw": "{\r\n    \"titulo\": \"Varios dias de mi vida\",\r\n    \"contenido\": \"Muestro mi recorrido en varios días\",\r\n    \"autor\": \"Jota Mario\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -143,7 +177,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/posts/18",
+							"raw": "http://127.0.0.1:8000/api/v1/posts/19",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -156,7 +190,7 @@
 								"api",
 								"v1",
 								"posts",
-								"18"
+								"19"
 							]
 						}
 					},
@@ -177,7 +211,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/posts/11",
+							"raw": "http://127.0.0.1:8000/api/v1/posts/19",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -190,7 +224,85 @@
 								"api",
 								"v1",
 								"posts",
-								"11"
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener_CategoriaXPost",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/posts/5/categories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"5",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts_eliminarDeCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": \"5\",\r\n    \"category_id\": \"8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categorizacion/eliminar-post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categorizacion",
+								"eliminar-post"
 							]
 						}
 					},
@@ -232,7 +344,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\" : \"Lifestyle\",\r\n    \"descripcion\": \"Estilos de vida extravagantes\",\r\n    \"foto\": \"Reiciendis praesentium adipisci temporibus\"\r\n}",
+							"raw": "{\r\n    \"nombre\" : \"Musical\",\r\n    \"descripcion\": \"Videos de Musica\",\r\n    \"foto\": \"kasdisjskjsapdospdksofjsofjsldsj\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -260,11 +372,23 @@
 				},
 				{
 					"name": "categories_obtenerporID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/categories/6",
+							"raw": "http://127.0.0.1:8000/api/v1/categories/16",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -277,7 +401,7 @@
 								"api",
 								"v1",
 								"categories",
-								"6"
+								"16"
 							]
 						}
 					},
@@ -290,7 +414,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\" : \"Lifestyle\",\r\n    \"descripcion\": \"Estilos de vida extravagantes\",\r\n    \"foto\": \"Reiciendis praesentium adipisci\"\r\n}",
+							"raw": "{\r\n    \"nombre\" : \"Musical\",\r\n    \"descripcion\": \"Audios de canciones\",\r\n    \"foto\": \"dkosdskdlsdksk\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -298,7 +422,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/categories/15",
+							"raw": "http://127.0.0.1:8000/api/v1/categories/16",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -311,7 +435,7 @@
 								"api",
 								"v1",
 								"categories",
-								"15"
+								"16"
 							]
 						}
 					},
@@ -323,7 +447,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/categories/2",
+							"raw": "http://127.0.0.1:8000/api/v1/categories/16",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -336,7 +460,172 @@
 								"api",
 								"v1",
 								"categories",
-								"2"
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener_PostXCategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/categories/5/posts",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"5",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "user_obtenerTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios_crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Catalina Londono\",\r\n    \"email\": \"catalina@correo.com\",\r\n    \"password\": \"catalina-londono\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios_actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Catalina Londono2\",\r\n    \"email\": \"catalina2@correo.com\",\r\n    \"password\": \"catalina-londono\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usuarios_eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"1"
 							]
 						}
 					},
